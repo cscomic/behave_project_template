@@ -12,7 +12,6 @@
 
 # here put the import lib
 from typing import NoReturn
-
 from behave.model import Tag, Feature, Scenario, Step
 from behave.runner import Context
 
