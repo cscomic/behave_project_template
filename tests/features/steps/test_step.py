@@ -12,7 +12,7 @@
 
 # here put the import lib
 from behave.runner import Context
-from behave import *
+from behave import given
 from typing import NoReturn
 
 
