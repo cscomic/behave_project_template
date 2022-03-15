@@ -58,3 +58,8 @@ MANIFEST
 !/logs/info.log
 !/build/
 !/.tox/
+!/.tox/
+/.tox/
+/build/
+/logs/error.log
+/logs/info.log
