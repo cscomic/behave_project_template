@@ -1,4 +1,4 @@
-# lang:zh-CN
+# lang:en
 Feature: running testing under behave framework
 
   Scenario: run a simple test

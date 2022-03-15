@@ -54,3 +54,7 @@ MANIFEST
 /venv/
 /build/
 /bin/
+!/logs/error.log
+!/logs/info.log
+!/build/
+!/.tox/

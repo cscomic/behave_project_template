@@ -11,12 +11,15 @@
 """
 
 # here put the import lib
+import logging
+
+from behave.log_capture import capture
 from behave.runner import Context
 from behave import given
 from typing import NoReturn
 
 
+@capture
 @given('Hello world')
 def step_impl(context: Context) -> NoReturn:
-    print("Hello World!\n\n")
-
+    logging.info("I capture log to info.log")

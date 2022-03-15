@@ -1,0 +1,54 @@
+---
+version: 1
+disable_existing_loggers: False
+formatters:
+    simple:
+        format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+        datefmt:
+    detailed:
+        format: "%(asctime)s | %(process)d | %(levelname)s | %(filename)s | %(lineno)d | %(name)s | %(message)s"
+        datefmt:
+
+handlers:
+    console:
+        class: logging.StreamHandler
+        level: DEBUG
+        formatter: simple
+        stream: ext://sys.stdout
+
+    info_file_handler:
+        class: logging.handlers.TimedRotatingFileHandler
+        level: INFO
+        formatter: detailed
+        filename: ../../../logs/info.log
+        backupCount: 30
+        encoding: utf8
+        when: D
+        interval: 1
+        delay: True
+
+    error_file_handler:
+        class: logging.handlers.TimedRotatingFileHandler
+        level: ERROR
+        formatter: detailed
+        filename: ../../../logs/errors.log
+        backupCount: 30
+        encoding: utf8
+        when: D
+        interval: 1
+        delay: True
+
+loggers:
+    my_module:
+        level: ERROR
+        handlers: [error_file_handler, info_file_handler]
+        propagate: no
+
+    info1:
+        level: INFO
+        handlers: [info_file_handler]
+        propagate: no
+
+root:
+    level: INFO
+    handlers: [console, info_file_handler, error_file_handler]

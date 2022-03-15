@@ -25,7 +25,8 @@ def before_all(context: Context) -> NoReturn:
     Returns:
 
     """
-    # context.config.setup_logging(configfile="../config/logging.ini")
+    # TODO: Using yaml format configure file instead of ini file
+    context.config.setup_logging(configfile="tests/config/logging.ini")
     pass
 
 
