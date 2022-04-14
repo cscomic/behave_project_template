@@ -3,9 +3,9 @@
 '''
 @File    :   log.py
 @Time    :   2022/01/19 14:18:56
-@Author  :   shengchenj
+@Author  :   cscomic
 @Version :   0.0.1
-@Contact :   shengchenj@isoftstone.com
+@Contact :   cscomicanimation@gmail.com
 @License :   MIT
 @Desc    :   None
 '''
